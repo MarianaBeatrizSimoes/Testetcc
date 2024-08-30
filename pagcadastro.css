@@ -1,0 +1,103 @@
+/* pagcadastro.css */
+
+body {
+    font-family: Arial, sans-serif;
+   /* background-color: #fcfaf3;*/
+   background-image: url(imgs/fundo.png);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img{
+    width: 120px;
+}
+
+form {
+    background-color: #0e4121;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    color:#2fcc54;
+}
+legend img {
+    margin-left: 10px; /* Espaço entre o texto e a imagem */
+    max-height: 60px; /* Tamanho máximo da imagem */
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+label.radio-group{
+
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+   
+}
+
+.radio-group label {
+    margin-right: 2px; /* Espaçamento entre as opções */
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: white;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px; /* Espaço entre o botão de rádio e o texto */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+a{
+    color: #2fcc54;
+   
+}
