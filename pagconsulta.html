@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Pontos de Descarte</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fdf0;
+            color: #2d602d;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .spacer {
+            height: 50px; /* Espaço reservado para o cabeçalho */
+        }
+        .cities {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espaçamento entre os botões das cidades */
+        }
+        .city {
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 1px solid #4caf50;
+            text-align: center;
+            background-color: #e6f7e6;
+            border-radius: 5px;
+        }
+        .city:hover {
+            background-color: #c8f5c8;
+        }
+        .locations {
+            display: none;
+            margin-top: 20px;
+            width: 100%; /* Alinha as informações com a largura da página */
+            max-width: 800px;
+        }
+        .location {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        .location h4 {
+            margin: 0;
+            color: #2d602d;
+        }
+    </style>
+</head>
+<header>
+    
+</header>
+<body>
+    <div class="spacer"></div> <!-- Espaço reservado para o cabeçalho -->
+    <div class="cities">
+        <div class="city" onclick="toggleLocations('city1')">São Paulo</div>
+        <div class="city" onclick="toggleLocations('city2')">Rio de Janeiro</div>
+        <div class="city" onclick="toggleLocations('city3')">Belo Horizonte</div>
+    </div>
+
+    <div id="city1" class="locations">
+        <div class="location">
+            <h4>EcoPonto Vila Mariana</h4>
+            <p><strong>Endereço:</strong> Rua Domingos de Morais, 1234</p>
+            <p><strong>Horário:</strong> 8h - 18h</p>
+            <p><strong>Tipos de Lixo:</strong> Papel, Plástico, Metal</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+        </div>
+        <div class="location">
+            <h4>EcoPonto Pinheiros</h4>
+            <p><strong>Endereço:</strong> Avenida Faria Lima, 789</p>
+            <p><strong>Horário:</strong> 9h - 17h</p>
+            <p><strong>Tipos de Lixo:</strong> Eletrônicos, Vidro</p>
+            <p><strong>Telefone:</strong> (11) 9876-5432</p>
+        </div>
+    </div>
+
+    <div id="city2" class="locations">
+        <div class="location">
+            <h4>EcoPonto Copacabana</h4>
+            <p><strong>Endereço:</strong> Rua Barata Ribeiro, 456</p>
+            <p><strong>Horário:</strong> 8h - 20h</p>
+            <p><strong>Tipos de Lixo:</strong> Orgânico, Papelão</p>
+            <p><strong>Telefone:</strong> (21) 2345-6789</p>
+        </div>
+        <div class="location">
+            <h4>EcoPonto Barra</h4>
+            <p><strong>Endereço:</strong> Avenida das Américas, 1000</p>
+            <p><strong>Horário:</strong> 7h - 19h</p>
+            <p><strong>Tipos de Lixo:</strong> Metal, Vidro</p>
+            <p><strong>Telefone:</strong> (21) 3456-7890</p>
+        </div>
+    </div>
+
+    <div id="city3" class="locations">
+        <div class="location">
+            <h4>EcoPonto Savassi</h4>
+            <p><strong>Endereço:</strong> Avenida Cristóvão Colombo, 333</p>
+            <p><strong>Horário:</strong> 9h - 18h</p>
+            <p><strong>Tipos de Lixo:</strong> Vidro, Plástico</p>
+            <p><strong>Telefone:</strong> (31) 3456-7890</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleLocations(cityId) {
+            // Oculta todas as localizações
+            const allLocations = document.querySelectorAll('.locations');
+            allLocations.forEach(location => location.style.display = 'none');
+
+            // Exibe apenas a localização clicada
+            const selectedCity = document.getElementById(cityId);
+            selectedCity.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
